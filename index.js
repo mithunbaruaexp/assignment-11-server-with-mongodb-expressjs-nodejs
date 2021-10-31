@@ -26,7 +26,7 @@ async function run() {
     const travelPackagesCollection = database.collection("TravelPackages");
     const travelersDataCollection = database.collection("TravelersData");
 
-    //GET API for travel packages
+    //GET API for travel package
     app.get("/packages", async (req, res) => {
       const cursor = travelPackagesCollection.find({});
       const travelPackages = await cursor.toArray();
